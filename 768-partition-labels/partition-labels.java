@@ -6,7 +6,7 @@ class Solution {
         while(i<n)
         {
             Character c=s.charAt(i);
-            int j=0,m=s.lastIndexOf(c);
+            int j=i,m=s.lastIndexOf(c);
             while(j<m)
             {
                 if(s.charAt(j)!=c)
