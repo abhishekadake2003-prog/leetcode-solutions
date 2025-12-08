@@ -3,11 +3,11 @@ class Solution {
         int ans=0;
       for(int i=1;i<=n;i++)
       {
-        for(int j=1;j<=n;j++)
+        for(int j=i+1;j<=n;j++)
         {
             double d=Math.sqrt(Math.pow(i,2)+Math.pow(j,2));
             if(d==Math.floor(d)&& d<=n)
-                ans++;
+                ans+=2;
         }
       }  
     // return 0;
