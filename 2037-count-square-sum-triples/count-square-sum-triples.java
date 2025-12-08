@@ -5,7 +5,7 @@ class Solution {
       {
         for(int j=i+1;j<=n;j++)
         {
-            double d=Math.sqrt(Math.pow(i,2)+Math.pow(j,2));
+            double d=Math.sqrt(i*i+j*j);
             if(d==Math.floor(d)&& d<=n)
                 ans+=2;
         }
