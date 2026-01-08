@@ -6,20 +6,17 @@ class Solution {
             Character a=s.charAt(i);
             map.put(a,map.getOrDefault(a,0)+1);
         }
-        boolean pass=true;
+        boolean pass=false;
         for(int e:map.values())
         {
             if(e%2==0)
                 ans+=e;
             else
             {
-                if(pass)
-                {
-                    ans++;
-                    pass=false;
-                }
+               pass=true;
                 ans+=e-1;
             }
         }
+        if(pass)ans++;
     return ans;}
 }
