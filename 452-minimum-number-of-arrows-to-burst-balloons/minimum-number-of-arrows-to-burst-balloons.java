@@ -5,11 +5,12 @@ class Solution {
         int mark=points[0][1],ans=1;
         for(int i=0;i<points.length;i++)
         {
-            if(mark<points[i][0] || mark>points[i][1])
+            if(mark<points[i][0])
             {
                 ans++;
                 mark=points[i][1];
             }
+
         }
         return ans;
     }
