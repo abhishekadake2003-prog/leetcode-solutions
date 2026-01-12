@@ -1,9 +1,18 @@
 class Solution {
     public int mySqrt(int x) {
-        long i=0;
-        while((i*i)<=x)
+        long i=0,j=x;
+        while(i<=j)
         {
-            i++;
+            long mid=(i+j)/2;
+            if(mid*mid<=x && mid+1*mid+1>x)
+                return (int)mid;
+            else
+            {
+                if(mid*mid>x)
+                    j=mid-1;
+                else
+                    i=mid+1;
+            }
         }
         return (int)i-1;
     }
