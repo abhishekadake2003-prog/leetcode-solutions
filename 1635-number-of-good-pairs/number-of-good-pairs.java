@@ -5,12 +5,13 @@ class Solution {
         for(int num:nums)
         {
             map.put(num,map.getOrDefault(num,0)+1);
-        }
-        for(int num:nums)
-        {
             good+=map.get(num)-1;
-            map.put(num,map.getOrDefault(num,0)-1);
         }
+        // for(int num:nums)
+        // {
+        //     good+=map.get(num)-1;
+        //     map.put(num,map.getOrDefault(num,0)-1);
+        // }
         return good;
     }
 }
