@@ -1,6 +1,5 @@
 class Solution {
     public String reverseVowels(String s) {
-        // HashMap<Character> map=new HashMap<>(ArrayList.asList(["A","E","I","O","U","a","e","i","o","u"]));
         char arr[]=s.toCharArray();
         int i=0,j=s.length()-1;
         while(i<j)
@@ -23,8 +22,14 @@ class Solution {
         }
         return new String(arr);
     }
-    boolean isVowel(char a)
+    boolean isVowel(char c)
     {
-        return String.valueOf(a).matches("(?i)[aeiouAEIOU]"); 
+        // return String.valueOf(a).matches("(?i)[aeiouAEIOU]"); 
+        // HashSet<Character> Set=new HashSet<>(ArrayList.asList(["A","E","I","O","U","a","e","i","o","u"]));
+        // return Set.contains(a)
+        c = Character.toLowerCase(c);
+        return c == 'a' || c == 'e' || c == 'i' 
+            || c == 'o' || c == 'u';
+
     }
 }
