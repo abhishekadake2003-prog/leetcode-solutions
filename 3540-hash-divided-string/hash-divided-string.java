@@ -1,7 +1,7 @@
 class Solution {
     public String stringHash(String s, int k) {
         int n=s.length();
-        String ans="";
+        StringBuilder ans=new StringBuilder();
         int j=0;
         int chars=0;
         for(int i=0;i<n;i++)
@@ -9,7 +9,7 @@ class Solution {
             if(j>=k)
             {
                 chars%=26;
-                ans=ans+(char)(chars+97);
+                ans.append((char)(chars+97));
                 chars=0;
                 j=0;
             }
@@ -18,7 +18,7 @@ class Solution {
             // System.out.println(chars);
         }
         chars%=26;
-        ans=ans+(char)(chars+97);
-        return ans;
+        ans.append((char)(chars+97));
+        return ans.toString();
     }
 }
